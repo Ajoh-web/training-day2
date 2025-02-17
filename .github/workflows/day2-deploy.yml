@@ -1,4 +1,4 @@
-name: terraform CICD
+name: terraform cicd
 on:
     push:
         branches:
