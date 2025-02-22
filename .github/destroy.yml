@@ -1,4 +1,4 @@
-name: terraform CICD
+name: terraform CICD Destroy AWS Resources
 on:
    workflow_dispatch:
         branches:
@@ -28,9 +28,9 @@ jobs:
               working-directory: .
             - name: Terraform Plan
               id: plan
-              run: terraform plan 
+              run: terraform plan -destroy
               working-directory: .
-            - name: Terraform destroy Resources
+            - name: Terraform destroy EC2 instances
               id: destroy
-              run: terraform destroy --auto-approve
+              run: aws ec2 terminate-instances --instance-ids i-05f1250b96bb7f809
               working-directory: .
