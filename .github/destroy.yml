@@ -2,7 +2,7 @@ name: terraform CICD Destroy AWS Resources
 on:
    workflow_dispatch:
         branches:
-          # - main
+          - main
 
 jobs:
     destroy:
