@@ -5,7 +5,7 @@ on:
           - main
 
 jobs:
-    build:
+    destroy:
         runs-on: Ubuntu-latest
         steps:
             - name: checkout
