@@ -1,8 +1,8 @@
 name: terraform CICD
 on:
-   workflow-dispatch:
+   workflow_dispatch:
         branches:
-          - main
+          # - main
 
 jobs:
     destroy:
@@ -28,9 +28,9 @@ jobs:
               working-directory: .
             - name: Terraform Plan
               id: plan
-              run: terraform plan
+              run: terraform plan 
               working-directory: .
-            - name: Terraform destroy
+            - name: Terraform destroy Resources
               id: destroy
               run: terraform destroy --auto-approve
               working-directory: .
